@@ -14,9 +14,13 @@ $codVenda = CodigoCaixa();
 $somaValores = SomarValores();
 $descontoCompra = CalcularDesconto();
 $dados = ConsultarCaixa();
-$processamento = updateProcessamento();
+
+// $processamentos = $ultimoCodVenda;
+// echo $processamentos;
+// $processamento = updateProcessamento($processamentos);
 
 ?>
+
 <?php foreach ($dados as $linha) { ?>
     <tr>
         <p class="txtinfoscaixa"><?php $linha["id_produtos"] ?></p>
@@ -85,7 +89,7 @@ $processamento = updateProcessamento();
                                             <input type="hidden" name="valor_compra" value="<?php echo $somaValores; ?>">
                                         </div>
                                     </fieldset>
-                                    <button type="submit" class="btn" id="finalizarCompra"><b>Finalizar Compra</b></button>
+                                    <button type="submit" class="btn" id="finalizarCompra" onclick=""><b>Finalizar Compra</b></button>
                                 </form>
                             </div>
                         </div>

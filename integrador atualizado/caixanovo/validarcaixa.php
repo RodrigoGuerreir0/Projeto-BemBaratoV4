@@ -108,16 +108,15 @@ function NovaVenda()
     return $hora;
 }
 
-function updateProcessamento(){
+function updateProcessamento($processamentos){
     $conexao = new PDO("mysql:host=localhost;dbname=bd_bembarato", "root", "");
     
-    $processamento=0;
 
-    if (isset($processamento)) {
-        $query = "UPDATE tb_produtos_venda SET processamento = 1 WHERE id_venda = $processamento";
+    if (isset($processamentos)) {
+        $query = "UPDATE tb_produtos_venda SET processamento = 1 WHERE id_venda = $processamentos";
         $stmt = $conexao->prepare($query);
         $stmt->execute();
-        return $processamento;
+        return $processamentos;
     } else {
         return "Erro: processamento não definido";
     }
