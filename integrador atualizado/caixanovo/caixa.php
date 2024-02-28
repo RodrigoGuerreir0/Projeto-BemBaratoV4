@@ -145,7 +145,7 @@ $processamento = updateProcessamento();
                                     </div>
                                     <?php foreach ($dados as $linha) { ?>
                                         <tr>
-                                            <p class="txtinfoscaixa"><?php echo "R$ " . $linha["valor"]?></p>
+                                            <p class="txtinfoscaixa"><?php echo "R$ " . $linha["valor"] ?></p>
                                             <?php $ultimoValor = $linha["valor"] ?>
 
                                         </tr>
@@ -192,7 +192,7 @@ $processamento = updateProcessamento();
                         <p><b>A definir- SHIFT + ?</b></p>
                         <p><b>A definir- SHIFT + ?</b></p>
                         <p><b>Fechar- ESC/Escape</b></p>
-                    
+
                     </fieldset>
                 </div>
             </div>
